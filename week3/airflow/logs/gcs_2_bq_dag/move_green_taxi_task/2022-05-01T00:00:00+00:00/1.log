@@ -1,0 +1,119 @@
+[2022-05-02 06:57:09,196] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_2_bq_dag.move_green_taxi_task scheduled__2022-05-01T00:00:00+00:00 [queued]>
+[2022-05-02 06:57:09,209] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_2_bq_dag.move_green_taxi_task scheduled__2022-05-01T00:00:00+00:00 [queued]>
+[2022-05-02 06:57:09,209] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 06:57:09,209] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 06:57:09,209] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 06:57:09,224] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): move_green_taxi_task> on 2022-05-01 00:00:00+00:00
+[2022-05-02 06:57:09,232] {standard_task_runner.py:52} INFO - Started process 493 to run task
+[2022-05-02 06:57:09,242] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_2_bq_dag', 'move_green_taxi_task', 'scheduled__2022-05-01T00:00:00+00:00', '--job-id', '248', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_dag.py', '--cfg-path', '/tmp/tmpbv1pgaal', '--error-file', '/tmp/tmpene1m3_s']
+[2022-05-02 06:57:09,243] {standard_task_runner.py:77} INFO - Job 248: Subtask move_green_taxi_task
+[2022-05-02 06:57:09,349] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_2_bq_dag.move_green_taxi_task scheduled__2022-05-01T00:00:00+00:00 [running]> on host 971b76ca1ca3
+[2022-05-02 06:57:09,480] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_2_bq_dag
+AIRFLOW_CTX_TASK_ID=move_green_taxi_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T00:00:00+00:00
+[2022-05-02 06:57:09,482] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-05-02 06:57:09,483] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-05-02 06:57:10,217] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-02.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-02.parquet
+[2022-05-02 06:57:10,500] {gcs.py:251} INFO - Total Bytes: 11658265 | Bytes Written: 11658265
+[2022-05-02 06:57:10,500] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-02.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-02.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:10,646] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-02.parquet deleted.
+[2022-05-02 06:57:10,646] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-12.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-12.parquet
+[2022-05-02 06:57:10,924] {gcs.py:251} INFO - Total Bytes: 1803610 | Bytes Written: 1803610
+[2022-05-02 06:57:10,924] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-12.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-12.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:11,152] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-12.parquet deleted.
+[2022-05-02 06:57:11,153] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-04.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-04.parquet
+[2022-05-02 06:57:11,428] {gcs.py:251} INFO - Total Bytes: 10368300 | Bytes Written: 10368300
+[2022-05-02 06:57:11,429] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-04.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-04.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:11,575] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-04.parquet deleted.
+[2022-05-02 06:57:11,575] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-08.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-08.parquet
+[2022-05-02 06:57:11,857] {gcs.py:251} INFO - Total Bytes: 8952875 | Bytes Written: 8952875
+[2022-05-02 06:57:11,857] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-08.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-08.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:12,083] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-08.parquet deleted.
+[2022-05-02 06:57:12,084] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-09.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-09.parquet
+[2022-05-02 06:57:12,359] {gcs.py:251} INFO - Total Bytes: 1908712 | Bytes Written: 1908712
+[2022-05-02 06:57:12,359] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-09.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-09.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:12,513] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-09.parquet deleted.
+[2022-05-02 06:57:12,513] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-11.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-11.parquet
+[2022-05-02 06:57:12,790] {gcs.py:251} INFO - Total Bytes: 1944133 | Bytes Written: 1944133
+[2022-05-02 06:57:12,790] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-11.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-11.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:13,012] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-11.parquet deleted.
+[2022-05-02 06:57:13,012] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-03.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-03.parquet
+[2022-05-02 06:57:13,306] {gcs.py:251} INFO - Total Bytes: 4771177 | Bytes Written: 4771177
+[2022-05-02 06:57:13,306] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-03.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-03.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:13,442] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-03.parquet deleted.
+[2022-05-02 06:57:13,443] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-05.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-05.parquet
+[2022-05-02 06:57:13,723] {gcs.py:251} INFO - Total Bytes: 10035406 | Bytes Written: 10035406
+[2022-05-02 06:57:13,723] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-05.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-05.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:14,386] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-05.parquet deleted.
+[2022-05-02 06:57:14,386] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-07.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-07.parquet
+[2022-05-02 06:57:14,665] {gcs.py:251} INFO - Total Bytes: 9384301 | Bytes Written: 9384301
+[2022-05-02 06:57:14,665] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-07.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-07.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:14,810] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-07.parquet deleted.
+[2022-05-02 06:57:14,810] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-09.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-09.parquet
+[2022-05-02 06:57:15,094] {gcs.py:251} INFO - Total Bytes: 9061270 | Bytes Written: 9061270
+[2022-05-02 06:57:15,094] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-09.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-09.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:15,337] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-09.parquet deleted.
+[2022-05-02 06:57:15,338] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-02.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-02.parquet
+[2022-05-02 06:57:15,614] {gcs.py:251} INFO - Total Bytes: 7901266 | Bytes Written: 7901266
+[2022-05-02 06:57:15,614] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-02.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-02.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:15,758] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-02.parquet deleted.
+[2022-05-02 06:57:15,758] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-12.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-12.parquet
+[2022-05-02 06:57:16,046] {gcs.py:251} INFO - Total Bytes: 8887392 | Bytes Written: 8887392
+[2022-05-02 06:57:16,046] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-12.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-12.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:16,281] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-12.parquet deleted.
+[2022-05-02 06:57:16,282] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-06.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-06.parquet
+[2022-05-02 06:57:16,561] {gcs.py:251} INFO - Total Bytes: 1485409 | Bytes Written: 1485409
+[2022-05-02 06:57:16,562] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-06.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-06.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:16,706] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-06.parquet deleted.
+[2022-05-02 06:57:16,707] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-04.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-04.parquet
+[2022-05-02 06:57:16,984] {gcs.py:251} INFO - Total Bytes: 885640 | Bytes Written: 885640
+[2022-05-02 06:57:16,984] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-04.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-04.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:17,238] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-04.parquet deleted.
+[2022-05-02 06:57:17,238] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-11.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-11.parquet
+[2022-05-02 06:57:17,512] {gcs.py:251} INFO - Total Bytes: 8963549 | Bytes Written: 8963549
+[2022-05-02 06:57:17,513] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-11.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-11.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:17,660] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-11.parquet deleted.
+[2022-05-02 06:57:17,660] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-10.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-10.parquet
+[2022-05-02 06:57:17,930] {gcs.py:251} INFO - Total Bytes: 2079420 | Bytes Written: 2079420
+[2022-05-02 06:57:17,930] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-10.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-10.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:18,171] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-10.parquet deleted.
+[2022-05-02 06:57:18,171] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-10.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-10.parquet
+[2022-05-02 06:57:18,446] {gcs.py:251} INFO - Total Bytes: 9316472 | Bytes Written: 9316472
+[2022-05-02 06:57:18,446] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-10.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-10.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:18,592] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-10.parquet deleted.
+[2022-05-02 06:57:18,592] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-08.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-08.parquet
+[2022-05-02 06:57:18,864] {gcs.py:251} INFO - Total Bytes: 1817418 | Bytes Written: 1817418
+[2022-05-02 06:57:18,865] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-08.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-08.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:19,105] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-08.parquet deleted.
+[2022-05-02 06:57:19,105] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-03.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-03.parquet
+[2022-05-02 06:57:19,372] {gcs.py:251} INFO - Total Bytes: 12164779 | Bytes Written: 12164779
+[2022-05-02 06:57:19,372] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-03.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-03.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:19,528] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-03.parquet deleted.
+[2022-05-02 06:57:19,528] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-01.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-01.parquet
+[2022-05-02 06:57:19,804] {gcs.py:251} INFO - Total Bytes: 12440451 | Bytes Written: 12440451
+[2022-05-02 06:57:19,804] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-01.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-01.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:20,034] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-01.parquet deleted.
+[2022-05-02 06:57:20,034] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-01.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-01.parquet
+[2022-05-02 06:57:20,297] {gcs.py:251} INFO - Total Bytes: 8617732 | Bytes Written: 8617732
+[2022-05-02 06:57:20,297] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-01.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-01.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:20,463] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-01.parquet deleted.
+[2022-05-02 06:57:20,463] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-07.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-07.parquet
+[2022-05-02 06:57:20,752] {gcs.py:251} INFO - Total Bytes: 1620411 | Bytes Written: 1620411
+[2022-05-02 06:57:20,753] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-07.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-07.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:20,957] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-07.parquet deleted.
+[2022-05-02 06:57:20,957] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2019/green_taxi_2019-06.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2019/green_taxi_2019-06.parquet
+[2022-05-02 06:57:21,235] {gcs.py:251} INFO - Total Bytes: 9391176 | Bytes Written: 9391176
+[2022-05-02 06:57:21,236] {gcs.py:264} INFO - Object raw/green_taxi/2019/green_taxi_2019-06.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2019/green_taxi_2019-06.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:21,428] {gcs.py:645} INFO - Blob raw/green_taxi/2019/green_taxi_2019-06.parquet deleted.
+[2022-05-02 06:57:21,428] {gcs_to_gcs.py:431} INFO - Executing copy of gs://ny-trips-de_ny_taxi_data_lake/raw/green_taxi/2020/green_taxi_2020-05.parquet to gs://ny-trips-de_ny_taxi_data_lake/green/green_taxi/2020/green_taxi_2020-05.parquet
+[2022-05-02 06:57:21,706] {gcs.py:251} INFO - Total Bytes: 1345963 | Bytes Written: 1345963
+[2022-05-02 06:57:21,706] {gcs.py:264} INFO - Object raw/green_taxi/2020/green_taxi_2020-05.parquet in bucket ny-trips-de_ny_taxi_data_lake rewritten to object green/green_taxi/2020/green_taxi_2020-05.parquet in bucket ny-trips-de_ny_taxi_data_lake
+[2022-05-02 06:57:21,883] {gcs.py:645} INFO - Blob raw/green_taxi/2020/green_taxi_2020-05.parquet deleted.
+[2022-05-02 06:57:21,905] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_2_bq_dag, task_id=move_green_taxi_task, execution_date=20220501T000000, start_date=20220502T065709, end_date=20220502T065721
+[2022-05-02 06:57:21,954] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 06:57:22,015] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
