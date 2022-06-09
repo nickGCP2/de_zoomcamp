@@ -24,3 +24,12 @@ types.StructType([
   StructField('wav_request_flag', StringType(), True),
   StructField('wav_match_flag', StringType(), True)
 ])
+
+------------
+types.StructType([
+  types.StructField('hour', types.TimestampType(), True),
+  types.StructField('zone', types.IntegerType(), True),
+  types.StructField('revenue', types.DoubleType(), True),
+  types.StructField('count', types.IntegerType(), True)
+])
+
